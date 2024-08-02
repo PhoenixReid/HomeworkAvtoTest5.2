@@ -30,7 +30,7 @@ public class AuthTest
         $("[data-test-id=\"login\"] input").setValue(registeredUser.getLogin());
         $("[data-test-id=\"password\"] input").setValue(registeredUser.getPassword());
         $("[data-test-id=\"action-login\"]").click();
-        $("[class='heading heading_size_l heading_theme_alfa-on-white']")
+        $("[id=\"root\"]")
                 .shouldBe(Condition.visible, Duration.ofSeconds(5))
                 .shouldHave(exactText("  Личный кабинет"));
 
